@@ -10,13 +10,13 @@ const Chat = () => {
   const { data } = useContext(ChatContext);
 
   return (
-    <div className="chat">
-      <div className="chatInfo">
+    <div className="flex flex-col w-full">
+      <div className="h-[50px] bg-[#5d5b8d] flex items-center justify-between p-[10px] text-gray-100">
         <span>{data.user?.displayName}</span>
-        <div className="chatIcons">
-          <img src={Cam} alt="" />
-          <img src={Add} alt="" />
-          <img src={More} alt="" />
+        <div className="flex m-[10px]">
+          <img className="h-[24px] cursor-pointer" src={Cam} alt="" />
+          <img className="h-[24px] cursor-pointer" src={Add} alt="" />
+          <img className="h-[24px] cursor-pointer" src={More} alt="" />
         </div>
       </div>
       <Messages />

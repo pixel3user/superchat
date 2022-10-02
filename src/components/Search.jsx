@@ -77,9 +77,10 @@ const Search = () => {
     setUsername("")
   };
   return (
-    <div className="search">
-      <div className="searchForm">
+    <div className="border-b-[1px] border-gray-600">
+      <div className="p-[10px]">
         <input
+          className="bg-transparent border-none text-white outline-none"
           type="text"
           placeholder="Find a user"
           onKeyDown={handleKey}
@@ -89,10 +90,10 @@ const Search = () => {
       </div>
       {err && <span>User not found!</span>}
       {user && (
-        <div className="userChat" onClick={handleSelect}>
-          <img src={user.photoURL} alt="" />
-          <div className="userChatInfo">
-            <span>{user.displayName}</span>
+        <div className="p-[10px] flex items-center m-[10px] text-white cursor-pointer hover:bg-[#2f2d52]" onClick={handleSelect}>
+          <img className="w-[50px] h-[50px] border rounded-full object-cover" src={user.photoURL} alt="" />
+          <div className="text-gray-100">
+            <span className="text-md font-semibold">{user.displayName}</span>
           </div>
         </div>
       )}

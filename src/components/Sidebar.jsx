@@ -5,7 +5,7 @@ import Chats from "./Chats"
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="bg-[#3e3c61] relative">
       <Navbar />
       <Search/>
       <Chats/>

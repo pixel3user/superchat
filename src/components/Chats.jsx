@@ -29,17 +29,17 @@ const Chats = () => {
   };
 
   return (
-    <div className="chats">
+    <div className="">
       {Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat) => (
         <div
-          className="userChat"
+          className="p-[10px] flex items-center m-[10px] text-white cursor-pointer hover:[#2f2d52]"
           key={chat[0]}
           onClick={() => handleSelect(chat[1].userInfo)}
         >
-          <img src={chat[1].userInfo.photoURL} alt="" />
-          <div className="userChatInfo">
-            <span>{chat[1].userInfo.displayName}</span>
-            <p>{chat[1].lastMessage?.text}</p>
+          <img className="w-[50px] h-[50px] border rounded-full object-cover" src={chat[1].userInfo.photoURL} alt="" />
+          <div className="">
+            <span className="text-md font-semibold">{chat[1].userInfo.displayName}</span>
+            <p className="text-sm text-gray-100">{chat[1].lastMessage?.text.slice(0,8)}...</p>
           </div>
         </div>
       ))}

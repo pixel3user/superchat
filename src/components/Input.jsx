@@ -74,25 +74,26 @@ const Input = () => {
     setImg(null);
   };
   return (
-    <div className="input">
+    <div className="flex h-[50px] bg-white p-[10px] items-center justify-between">
       <input
+        className="w-full border-none outline-none text-[#2f2d52] text-md"
         type="text"
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
         value={text}
       />
-      <div className="send">
-        <img src={Attach} alt="" />
+      <div className="flex flex-row items-center m-[10px]">
+        {/* <img className="h-[24px] cursor-pointer" src={Attach} alt="" /> */}
         <input
           type="file"
           style={{ display: "none" }}
           id="file"
           onChange={(e) => setImg(e.target.files[0])}
         />
-        <label htmlFor="file">
-          <img src={Img} alt="" />
+        <label className="mx-3" htmlFor="file">
+          <img className=" w-[48px] cursor-pointer" src={Img} alt="" />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button className="border-none p-2 rounded-lg w-fit h-fit text-white bg-[#8da4f1] cursor-pointer" onClick={handleSend}>Send</button>
       </div>
     </div>
   );
