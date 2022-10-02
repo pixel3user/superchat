@@ -21,7 +21,7 @@ const Messages = () => {
   console.log(messages)
 
   return (
-      <div className="w-full bg-[#ddddf7] p-[10px] h-[calc(100% - 160px)] h-full overflow-auto">
+      <div className="w-full bg-[#ddddf7] dark:bg-black p-[10px] h-[calc(100% - 160px)] h-full overflow-auto">
       {messages.map((m) => (
         <Message message={m} key={m.id} />
       ))}

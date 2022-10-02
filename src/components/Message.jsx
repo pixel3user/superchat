@@ -33,9 +33,9 @@ const Message = ({ message }) => {
         </div>
       </div>
       <div className={`flex flex-col m-[10px] max-w-[80%] ${message.senderId === currentUser.uid && "items-end"}`}>
-        <p className={`bg-white py-[10px] px-[10px] rounded-xl max-w-fit ${message.senderId === currentUser.uid && "bg-[#8da4f1] text-white"}`}>{message.text}</p>
+        <p className={`py-[10px] px-[10px] dark:text-white rounded-xl max-w-fit ${message.senderId === currentUser.uid ? "bg-[#8da4f1] dark:bg-[#8da4f1] text-white" : "bg-white dark:bg-green-700"}`}>{message.text}</p>
         {message.img && <img src={message.img} alt="" />}
-        <span className="text-[12px]">{message.date.toDate().toLocaleTimeString('en-US').slice(0,5)}{message.date.toDate().toLocaleTimeString('en-US').slice(8)}{message.date.toDate().toDateString().slice(3)}</span>
+        <span className="text-[12px] dark:text-white">{message.date.toDate().toLocaleTimeString('en-US').slice(0,5)}{message.date.toDate().toLocaleTimeString('en-US').slice(8)}{message.date.toDate().toDateString().slice(3)}</span>
       </div>
     </div>
   );

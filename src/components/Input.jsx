@@ -74,9 +74,9 @@ const Input = () => {
     setImg(null);
   };
   return (
-    <div className="flex h-[50px] bg-white p-[10px] items-center justify-between">
+    <div className="flex h-[50px] bg-white dark:bg-gray-700 dark:text-white p-[10px] items-center justify-between">
       <input
-        className="w-full border-none outline-none text-[#2f2d52] text-md"
+        className="w-full border-none outline-none bg-transparent dark:dark:text-white text-[#2f2d52] text-md"
         type="text"
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
