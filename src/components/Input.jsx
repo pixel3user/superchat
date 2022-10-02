@@ -90,8 +90,8 @@ const Input = () => {
           id="file"
           onChange={(e) => setImg(e.target.files[0])}
         />
-        <label className="mx-3" htmlFor="file">
-          <img className=" w-[48px] cursor-pointer" src={Img} alt="" />
+        <label className="w-8 mx-3" htmlFor="file">
+          <img className="w-full cursor-pointer" src={Img} alt="" />
         </label>
         <button className="border-none p-2 rounded-lg w-fit h-fit text-white bg-[#8da4f1] cursor-pointer" onClick={handleSend}>Send</button>
       </div>

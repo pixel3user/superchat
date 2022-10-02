@@ -37,7 +37,7 @@ const Chats = () => {
           onClick={() => handleSelect(chat[1].userInfo)}
         >
           <img className="w-[50px] h-[50px] border rounded-full object-cover" src={chat[1].userInfo.photoURL} alt="" />
-          <div className="">
+          <div className="mx-3">
             <span className="text-md font-semibold">{chat[1].userInfo.displayName}</span>
             <p className="text-sm text-gray-100">{chat[1].lastMessage?.text.slice(0,8)}...</p>
           </div>
