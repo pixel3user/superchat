@@ -15,7 +15,7 @@ const Message = ({ message }) => {
   return (
     <div
       ref={ref}
-      className={`flex m-[20px] mb-[20px] ${message.senderId === currentUser.uid && "flex-row-reverse"}`}
+      className={`flex w-full m-[20px] mb-[20px] ${message.senderId === currentUser.uid && "flex-row-reverse"}`}
     >
       <div className="flex flex-col text-gray-500 font-normal">
         <img

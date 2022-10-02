@@ -4,7 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import { db } from "../firebase";
 
-const Chats = () => {
+const Chats = ({setshowMenu}) => {
   const [chats, setChats] = useState([]);
 
   const { currentUser } = useContext(AuthContext);
@@ -25,7 +25,8 @@ const Chats = () => {
   }, [currentUser.uid]);
 
   const handleSelect = (u) => {
-    dispatch({ type: "CHANGE_USER", payload: u });
+    dispatch({ type: "CHANGE_USER", payload: u })
+    setshowMenu(false)
   };
 
   return (
