@@ -18,7 +18,7 @@ const Message = ({ message }) => {
       className={`flex w-full m-[20px] mb-[20px] ${message.senderId === currentUser.uid && "flex-row-reverse"}`}
     >
       <div className="flex flex-col text-gray-500 font-normal">
-        <img
+        {/* <img
           className="w-[40px] h-[40px] border rounded-full object-cover"
           src={
             message.senderId === currentUser.uid
@@ -26,15 +26,16 @@ const Message = ({ message }) => {
               : data.user.photoURL
           }
           alt=""
-        />
+        /> */}
         <div className="flex flex-col text-sm">
-          <span className="mx-1">{message.date.toDate().toDateString().slice(4)}</span>
-          <span>{message.date.toDate().toLocaleTimeString('en-US')}</span>
+          {/* <span className="mx-1">{message.date.toDate().toDateString().slice(4)}</span> */}
+          {/* <span>{message.date.toDate().toLocaleTimeString('en-US').slice(0,5)}{message.date.toDate().toLocaleTimeString('en-US').slice(8)}</span> */}
         </div>
       </div>
       <div className={`flex flex-col m-[10px] max-w-[80%] ${message.senderId === currentUser.uid && "items-end"}`}>
         <p className={`bg-white py-[10px] px-[10px] rounded-xl max-w-fit ${message.senderId === currentUser.uid && "bg-[#8da4f1] text-white"}`}>{message.text}</p>
         {message.img && <img src={message.img} alt="" />}
+        <span className="text-[12px]">{message.date.toDate().toLocaleTimeString('en-US').slice(0,5)}{message.date.toDate().toLocaleTimeString('en-US').slice(8)}{message.date.toDate().toDateString().slice(3)}</span>
       </div>
     </div>
   );
