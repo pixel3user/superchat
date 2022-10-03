@@ -81,7 +81,7 @@ const Login = () => {
   }
 
   return (
-    <div className="flex h-screen w-full bg-dashboard-image justify-center items-center">
+    <div className="flex h-screen w-full sm:bg-dashboard-image justify-center items-center">
       <div className="flex flex-col w-full sm:w-1/2 lg:w-1/3 h-fit p-4 rounded-xl bg-gray-100">
         <span className="mx-auto my-3 font-bold text-xl text-gray-500">Super Chat</span>
         <span className="text-sm my-2 mx-auto font-semibold text-gray-600">Login</span>
